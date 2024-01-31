@@ -1,0 +1,10 @@
+{% block title %} Post Create {% endblock %}
+{% block body %}
+    <h1>Post Create Page</h1>
+    <form method="post" action="{% url 'xojiakbar:post-create'%}">
+        {{ form.as_div }}<br>
+        {% csrf_token %}
+        <button type="submit">Create Post</button>
+    </form>
+
+{% endblock %}
